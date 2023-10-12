@@ -3,9 +3,13 @@
 
 Penjelasan Source Code
 
+
+
 Main Class HotelManagementApp
 
-case 1:
+
+
+    case 1:
     System.out.print("Nomor Kamar : ");
     int roomNumber = scanner.nextInt();
     scanner.nextLine();
@@ -17,9 +21,11 @@ case 1:
     Room room = new Room(roomNumber, roomType, price);
     hotel.addRoom(room);
     break;
+    
 Pada case 1, program menerima input pengguna untuk menambahkan informasi kamar. Pengguna melakukan input nomor kamar, tipe kamar, dan harga. Informasi ini digunakan untuk membuat objek Room, yang ditambahkan ke daftar kamar di objek hotel.
 
-case 2:
+
+    case 2:
     System.out.print("ID Tamu : ");
     int guestId = scanner.nextInt();
     scanner.nextLine();
@@ -30,9 +36,11 @@ case 2:
     Guest guest = new Guest(guestId, name, email);
     hotel.addGuest(guest);
     break;
+    
 sama seperti case 1, tapi ini untuk informasi tamu
 
-case 3:
+
+    case 3:
     System.out.print("ID Reservasi : ");
     int reservationId = scanner.nextInt();
     scanner.nextLine();
@@ -66,17 +74,17 @@ case 3:
     break;
 sama seperti case 1 dan 2 tapi ini untuk informasi reservasi dan program mencari objek tamu dan kamar yang sesuai dengan ID yang telah pengguna inputkan
 
-case 4:
+    case 4:
     displayData(hotel);
     break;
 untuk menampilkan data yang telah diinputkan
 
-case 5:
+    case 5:
     System.out.println("Mematikan Sistem");
     System.exit(0);
 untuk keluar dari program
 
-private static Guest findGuestById(List<Guest> guests, int guestId) {
+    private static Guest findGuestById(List<Guest> guests, int guestId) {
     for (Guest guest : guests) {
         if (guest.getGuestId() == guestId) {
             return guest;
@@ -86,17 +94,17 @@ private static Guest findGuestById(List<Guest> guests, int guestId) {
 }
 untuk mencari ID tamu
 
-private static Room findRoomByNumber(List<Room> rooms, int roomNumber) {
+    private static Room findRoomByNumber(List<Room> rooms, int roomNumber) {
     for (Room room : rooms) {
         if (room.getRoomNumber() == roomNumber) {
             return room;
         }
     }
     return null;
-}
+    }
 untuk mencari nomor kamar
 
-private static void displayData(Hotel hotel) {
+    private static void displayData(Hotel hotel) {
     System.out.println("Data Kamar :");
     for (Room room : hotel.getRooms()) {
         System.out.println("Nomor Kamar : " + room.getRoomNumber());
