@@ -268,3 +268,9 @@ Class Hotel
     }
     }
 Hotel adalah class yang digunakan untuk menyimpan dan mengirimkan informasi tentang kamar, tamu, dan reservasi ke main class HotelManagementApp
+
+
+# output
+![PBO1](https://github.com/yusufmuhamaddd/pbo-post-test-2/assets/126859339/6ea1bc64-2bd7-46ac-9c74-4c4e1d17db3d)
+![PBO2](https://github.com/yusufmuhamaddd/pbo-post-test-2/assets/126859339/90cf58b3-5dc4-41f2-83d0-499c451574cd)
+![PBO3](https://github.com/yusufmuhamaddd/pbo-post-test-2/assets/126859339/47d83ab7-77f1-4913-bb2f-75256b68db41)
