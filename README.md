@@ -127,5 +127,5 @@ untuk mencari nomor kamar
         System.out.println("Check-In : " + reservation.getCheckInDate());
         System.out.println("Check-Out : " + reservation.getCheckOutDate());
     }
-}
+    }
 untuk menampilkan seluruh data yang telah pengguna inputkan yang disimpan didalam class Hotel
