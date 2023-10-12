@@ -129,3 +129,142 @@ untuk mencari nomor kamar
     }
     }
 untuk menampilkan seluruh data yang telah pengguna inputkan yang disimpan didalam class Hotel
+
+
+
+Class Room
+
+    public class Room {
+    private int roomNumber;
+    private String roomType;
+    private double price;
+
+    public Room(int roomNumber, String roomType, double price) {
+        this.roomNumber = roomNumber;
+        this.roomType = roomType;
+        this.price = price;
+    }
+
+    public int getRoomNumber() {
+        return roomNumber;
+    }
+
+    public String getRoomType() {
+        return roomType;
+    }
+
+    public double getPrice() {
+        return price;
+    }
+    }
+Room adalah class yang digunakan untuk mengelola informasi tentang kamar hotel.
+
+
+
+Class Guest
+
+    public class Guest {
+    private int guestId;
+    private String name;
+    private String email;
+
+    public Guest(int guestId, String name, String email) {
+        this.guestId = guestId;
+        this.name = name;
+        this.email = email;
+    }
+
+    public int getGuestId() {
+        return guestId;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+    }
+Guest adalah class yang digunakan untuk mengelola informasi tentang tamu hotel.
+
+
+
+Class Reservation
+
+    import java.util.Date;
+
+    public class Reservation {
+        private int reservationId;
+        private Guest guest;
+        private Room room;
+        private Date checkInDate;
+        private Date checkOutDate;
+    
+    public Reservation(int reservationId, Guest guest, Room room, Date checkInDate, Date checkOutDate) {
+        this.reservationId = reservationId;
+        this.guest = guest;
+        this.room = room;
+        this.checkInDate = checkInDate;
+        this.checkOutDate = checkOutDate;
+    }
+
+    public int getReservationId() {
+        return reservationId;
+    }
+
+    public Guest getGuest() {
+        return guest;
+    }
+
+    public Room getRoom() {
+        return room;
+    }
+
+    public Date getCheckInDate() {
+        return checkInDate;
+    }
+
+    public Date getCheckOutDate() {
+        return checkOutDate;
+    }
+    }
+Reservation adalah class yang digunakan untuk mengelola informasi tentang reservasi hotel.
+
+
+
+Class Hotel
+
+    import java.util.ArrayList;
+    import java.util.List;
+
+    public class Hotel {
+        private List<Room> rooms = new ArrayList<>();
+        private List<Guest> guests = new ArrayList<>();
+        private List<Reservation> reservations = new ArrayList<>();
+
+    public void addRoom(Room room) {
+        rooms.add(room);
+    }
+
+    public void addGuest(Guest guest) {
+        guests.add(guest);
+    }
+
+    public void addReservation(Reservation reservation) {
+        reservations.add(reservation);
+    }
+
+    public List<Room> getRooms() {
+        return rooms;
+    }
+
+    public List<Guest> getGuests() {
+        return guests;
+    }
+
+    public List<Reservation> getReservations() {
+        return reservations;
+    }
+    }
+Hotel adalah class yang digunakan untuk menyimpan dan mengirimkan informasi tentang kamar, tamu, dan reservasi ke main class HotelManagementApp
